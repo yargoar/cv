@@ -1,0 +1,77 @@
+services:
+  # Banco de dados MongoDB
+  mongo_db:
+    image: mongo:6
+    container_name: yargoar_mongodb
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGODB_DB_ROOT_PASSWORD:-yargoar_password}
+      MONGO_INITDB_DATABASE: ${MONGODB_DB_NAME:-cv_db}
+      LANGUAGES: ${LANGUAGES:-pt,en,fr}
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+      - ./cv-fullstack/db/init-db:/docker-entrypoint-initdb.d:ro
+    networks:
+      - yargoar-network
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 15s
+
+  # Backend Node.js API
+  node_api:
+    build:
+      context: ./cv-fullstack/api
+      dockerfile: Dockerfile
+    container_name: yargoar_node_api
+    restart: unless-stopped
+    environment:
+      MONGO_URI: mongodb://root:${MONGODB_DB_ROOT_PASSWORD:-yargoar_password}@mongo_db:27017/${MONGODB_DB_NAME:-cv_db}?authSource=admin
+      NODE_ENV: production
+      PORT: 3001
+    ports:
+      - "3001:3001"
+    depends_on:
+      mongo_db:
+        condition: service_healthy
+    networks:
+      - yargoar-network
+
+  # Frontend React
+  frontend_react:
+    build:
+      context: ./cv-fullstack/front-react
+      dockerfile: Dockerfile
+      args:
+        - VITE_ENV=production
+        - VITE_API_URL=${VITE_API_URL:-http://localhost:3001/api/}
+        - VITE_APP_TITLE=${VITE_APP_TITLE:-CV Fullstack}
+        - VITE_APP_PRIMARY_COLOR=${VITE_APP_PRIMARY_COLOR:-#007bff}
+        - VITE_APP_SECONDARY_COLOR=${VITE_APP_SECONDARY_COLOR:-#6c757d}
+        - VITE_APP_TEXT_COLOR=${VITE_APP_TEXT_COLOR:-#212529}
+        - VITE_APP_BACKGROUND_COLOR=${VITE_APP_BACKGROUND_COLOR:-#ffffff}
+        - VITE_APP_FONT_TITLE_URL=${VITE_APP_FONT_TITLE_URL:-}
+        - VITE_APP_FONT_BODY_URL=${VITE_APP_FONT_BODY_URL:-}
+        - VITE_APP_FONT_TITLE=${VITE_APP_FONT_TITLE:-Inter}
+        - VITE_APP_FONT_BODY=${VITE_APP_FONT_BODY:-Inter}
+    container_name: yargoar_frontend_react
+    restart: unless-stopped
+    ports:
+      - "3000:80"
+    depends_on:
+      - node_api
+    networks:
+      - yargoar-network
+
+volumes:
+  mongodb_data:
+    driver: local
+
+networks:
+  yargoar-network:
+    driver: bridge
