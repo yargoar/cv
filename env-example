@@ -1,0 +1,21 @@
+# CV Fullstack Configuration Example
+# Copy this file to .env and adjust the values as needed
+
+# MongoDB Database
+MONGODB_DB_ROOT_PASSWORD=your_password_here
+MONGODB_DB_NAME=cv_db
+LANGUAGES=pt,en,fr
+
+# Backend API
+VITE_API_URL=http://localhost:3001/api/
+
+# Frontend React
+VITE_APP_TITLE=CV Fullstack
+VITE_APP_PRIMARY_COLOR=#007bff
+VITE_APP_SECONDARY_COLOR=#6c757d
+VITE_APP_TEXT_COLOR=#212529
+VITE_APP_BACKGROUND_COLOR=#ffffff
+VITE_APP_FONT_TITLE_URL=https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap
+VITE_APP_FONT_BODY_URL=https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap
+VITE_APP_FONT_TITLE=Inter
+VITE_APP_FONT_BODY=Inter
