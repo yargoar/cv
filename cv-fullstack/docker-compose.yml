@@ -1,0 +1,62 @@
+services:
+  mongo_db:
+    image: mongo:6
+    container_name: yargoar_mongodb
+    volumes:
+      - db-data:/data/db
+      - ./db/init-db:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 15s
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGODB_DB_ROOT_PASSWORD}
+      MONGO_INITDB_DATABASE: ${MONGODB_DB_NAME}
+      LANGUAGES: ${LANGUAGES}
+    networks:
+      - yargo_ar
+    restart: unless-stopped
+
+  node_api:
+    build: ./api
+    container_name: yargoar_node_api
+    environment:
+      MONGO_URI: mongodb://root:${MONGODB_DB_ROOT_PASSWORD}@mongo_db:27017/${MONGODB_DB_NAME}?authSource=admin
+    networks:
+      - yargo_ar
+    depends_on:
+      mongo_db:
+        condition: service_healthy
+    restart: unless-stopped
+
+  frontend_react:
+    container_name: yargoar_frontend_react
+    build:
+      context: ./front-react
+      args:
+        - VITE_ENV=production
+        - VITE_API_URL=${VITE_API_URL}
+        - VITE_APP_TITLE=${VITE_APP_TITLE}
+        - VITE_APP_PRIMARY_COLOR=${VITE_APP_PRIMARY_COLOR}
+        - VITE_APP_SECONDARY_COLOR=${VITE_APP_SECONDARY_COLOR}
+        - VITE_APP_TEXT_COLOR=${VITE_APP_TEXT_COLOR}
+        - VITE_APP_BACKGROUND_COLOR=${VITE_APP_BACKGROUND_COLOR}
+        - VITE_APP_FONT_TITLE_URL=${VITE_APP_FONT_TITLE_URL}
+        - VITE_APP_FONT_BODY_URL=${VITE_APP_FONT_BODY_URL}
+        - VITE_APP_FONT_TITLE=${VITE_APP_FONT_TITLE}
+        - VITE_APP_FONT_BODY=${VITE_APP_FONT_BODY}
+      dockerfile: Dockerfile
+    networks:
+      - yargo_ar
+    volumes:
+      - ./front-react/dist:/var/www/front-react
+
+networks:
+  yargo_ar:
+    external: true
+
+volumes:
+  db-data:

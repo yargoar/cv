@@ -1,0 +1,22 @@
+.language_selector {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.language_selector button {
+    margin: 0 .1rem;
+    padding: .1rem .4rem;
+    font-size: 1.1rem;
+    color: var(--secondary-color);
+    background-color: var(--background-color);
+    border: 1px solid var(--secondary-color);
+    font-weight: 200;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.language_selector button[aria-pressed="true"] {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    font-weight: 700;
+}

@@ -1,0 +1,455 @@
+{
+    "lang": "en",
+    "name": "Iargo Anjos Rocha",
+    "profession": "Analyst / FullStack Developer",
+    "contact": [
+        {
+            "label": "Email",
+            "content": "yargo.ar@gmail.com",
+            "type": "email"
+        },
+        {
+            "label": "Phone",
+            "content": "(819) 212-5666",
+            "type": "phone"
+        },
+        {
+            "label": "LinkedIn",
+            "content": "https://linkedin.com/in/iargo-anjos-rocha",
+            "type": "linkedin"
+        }
+    ],
+    "sections": [
+        {
+            "name": "Professional Profile",
+            "content": {
+                "type": "text_block",
+                "text": "Full-stack developer with over 10 years of experience in PHP, JavaScript (Vue.js/React), and cloud infrastructure management. Expert in system automation and secure solutions. Strong analytical and problem-solving skills."
+            }
+        },
+        {
+            "name": "Projects",
+            "content": {
+                "type": "complex_list",
+                "items": [
+                    {
+                        "name": "Multiplatform multiplayer game portal",
+                        "link": "https://tictactoe.vue.yargo.ar",
+                        "description": "Under construction to demonstrate technical capabilities - Vue.js, PHP/Laravel, Redis, Reverb, Docker",
+                        "techs": [
+                            "vue.js",
+                            "php",
+                            "laravel",
+                            "redis",
+                            "docker"
+                        ]
+                    },
+                    {
+                        "name": "USherbrooke.ca",
+                        "link": "https://usherbrooke.ca",
+                        "description": "Restructuring of the site and its themes according to WCAG and W3C standards",
+                        "techs": [
+                            "html",
+                            "css",
+                            "javascript",
+                            "wcag",
+                            "w3c"
+                        ]
+                    },
+                    {
+                        "name": "Ticket purchase system at xPayrience",
+                        "link": "https://secure3.xpayrience.com/camping_pourki",
+                        "description": "Reduced implementation time from 35 hours to 30 minutes",
+                        "techs": [
+                            "php",
+                            "laravel",
+                            "javascript"
+                        ]
+                    },
+                    {
+                        "name": "Campground reservation system at xPayrience",
+                        "link": "https://secure3.xpayrience.com/camping_pourki",
+                        "description": "Design and implementation",
+                        "techs": [
+                            "php",
+                            "laravel",
+                            "javascript"
+                        ]
+                    },
+                    {
+                        "name": "Hotel room reservation system at xPayrience",
+                        "link": "https://secure3.xpayrience.com/motel_laplace",
+                        "description": "Design and implementation",
+                        "techs": [
+                            "php",
+                            "laravel",
+                            "javascript"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Professional Experience",
+            "content": {
+                "type": "experience_list",
+                "items": [
+                    {
+                        "name": "Full Stack Developer",
+                        "company": "COFOMO (University of Montreal)",
+                        "period": "2023-2024",
+                        "tasks": [
+                            "Development of Moodle plugins in PHP, MySQL, JavaScript, and React.",
+                            "Infrastructure management on Google Cloud (GCP).",
+                            "Code review and creation of tests with PHPUnit.",
+                            "Participation in load testing and plugin optimization."
+                        ],
+                        "techs": [
+                            "php",
+                            "mysql",
+                            "javascript",
+                            "react",
+                            "gcp",
+                            "phpunit"
+                        ]
+                    },
+                    {
+                        "name": "Full Stack Developer",
+                        "company": "University of Sherbrooke",
+                        "period": "2019-2023",
+                        "tasks": [
+                            "Restructuring of the main site according to WCAG and W3C standards.",
+                            "Integration of Vue.js components with Node.js, Yii, and Laravel.",
+                            "Development of TYPO3/PHP themes and UX optimization.",
+                            "Creation of CI/CD pipelines in GitLab."
+                        ],
+                        "techs": [
+                            "vue.js",
+                            "node.js",
+                            "yii",
+                            "laravel",
+                            "typo3",
+                            "gitlab"
+                        ]
+                    },
+                    {
+                        "name": "Full Stack Developer",
+                        "company": "xPayrience, Magog",
+                        "period": "2017-2019",
+                        "tasks": [
+                            "Design of new features and prototypes.",
+                            "Automation of production processes in Node.js, Laravel, and jQuery.",
+                            "Creation of administrative tools."
+                        ],
+                        "techs": [
+                            "node.js",
+                            "laravel",
+                            "jquery"
+                        ]
+                    },
+                    {
+                        "name": "Web Developer",
+                        "company": "Groupe IXTROM. INC., Magog | 2015 & Plogg, Sherbrooke",
+                        "period": "2014-2015",
+                        "tasks": [
+                            "Development of printable and online reports with HTML/CSS, JavaScript, and Bootstrap.",
+                            "Integration of interactive maps with Leaflet and OpenLayers.",
+                            "Creation and customization of WordPress themes."
+                        ],
+                        "techs": [
+                            "html",
+                            "css",
+                            "javascript",
+                            "bootstrap",
+                            "leaflet",
+                            "wordpress"
+                        ]
+                    },
+                    {
+                        "name": "Senior Developer",
+                        "company": "FGV, Rio de Janeiro, Brazil",
+                        "period": "2012-2013",
+                        "tasks": [
+                            "Leading a development team and coordinating projects.",
+                            "Creation of a JavaScript framework for educational games.",
+                            "Integration of educational solutions with Moodle and SCORM."
+                        ],
+                        "techs": [
+                            "javascript",
+                            "moodle",
+                            "scorm"
+                        ]
+                    },
+                    {
+                        "name": "Intern to Senior Developer",
+                        "company": "UNISUAM, Rio de Janeiro, Brazil",
+                        "period": "2007-2012",
+                        "tasks": [
+                            "Maintenance of legacy systems in COBOL.",
+                            "Development of modern SaaS in PHP, JavaScript, and CSS.",
+                            "Design of educational games for distance learning."
+                        ],
+                        "techs": [
+                            "cobol",
+                            "php",
+                            "javascript",
+                            "css"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Technical Skills",
+            "content": {
+                "type": "simple_list",
+                "items": [
+                    {
+                        "name": "PHP, Laravel, .NET, JavaScript, Vue.js, React",
+                        "techs": [
+                            "php",
+                            "laravel",
+                            ".net",
+                            "javascript",
+                            "vue.js",
+                            "react"
+                        ]
+                    },
+                    {
+                        "name": "MySQL, PostgreSQL, MongoDB",
+                        "techs": [
+                            "mysql",
+                            "postgresql",
+                            "mongodb"
+                        ]
+                    },
+                    {
+                        "name": "GitLab CI/CD, Jenkins, Docker",
+                        "techs": [
+                            "gitlab",
+                            "jenkins",
+                            "docker"
+                        ]
+                    },
+                    {
+                        "name": "UX integration and compliance with WCAG standards",
+                        "techs": [
+                            "ux",
+                            "wcag"
+                        ]
+                    },
+                    {
+                        "name": "Project management and problem-solving",
+                        "techs": [
+                            "project management",
+                            "problem-solving"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Education",
+            "content": {
+                "type": "simple_list",
+                "items": [
+                    {
+                        "name": "Bachelor's Degree in Information Technology",
+                        "complement": "UNISUAM, Rio de Janeiro, Brazil | 2005-2007",
+                        "techs": []
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Professional Development",
+            "content": {
+                "type": "simple_list",
+                "items": [
+                    {
+                        "name": "React.js Development",
+                        "complement": "2024",
+                        "techs": [
+                            "javascript",
+                            "react"
+                        ]
+                    },
+                    {
+                        "name": "Moodle Plugin Development in PHP",
+                        "complement": "2023",
+                        "techs": [
+                            "php",
+                            "moodle"
+                        ]
+                    },
+                    {
+                        "name": "Vue.js Development",
+                        "complement": "2019",
+                        "techs": [
+                            "javascript",
+                            "vue.js"
+                        ]
+                    },
+                    {
+                        "name": "Google Cloud Platform (GCP)",
+                        "complement": "2022",
+                        "techs": [
+                            "gcp",
+                            "cloud"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Technical Environment",
+            "content": {
+                "type": "nested_list",
+                "items": [
+                    {
+                        "name": "Languages",
+                        "items": [
+                            "PHP, JavaScript (Vanilla, Vue.js, React), SQL (MySQL, PostgreSQL, MSSQL), .NET, HTML/CSS, Node.js"
+                        ],
+                        "techs": [
+                            "php",
+                            "javascript",
+                            "sql",
+                            ".net",
+                            "html",
+                            "css",
+                            "node.js"
+                        ]
+                    },
+                    {
+                        "name": "Frameworks / CMS",
+                        "items": [
+                            "Laravel, Yii, TYPO3, Bootstrap, Moodle, WordPress, Drupal"
+                        ],
+                        "techs": [
+                            "laravel",
+                            "yii",
+                            "typo3",
+                            "bootstrap",
+                            "moodle",
+                            "wordpress",
+                            "drupal"
+                        ]
+                    },
+                    {
+                        "name": "CI/CD",
+                        "items": [
+                            "GitLab, Jenkins"
+                        ],
+                        "techs": [
+                            "gitlab",
+                            "jenkins"
+                        ]
+                    },
+                    {
+                        "name": "Cloud",
+                        "items": [
+                            "AWS, Firebase, Google Cloud Platform (GCP)"
+                        ],
+                        "techs": [
+                            "aws",
+                            "firebase",
+                            "gcp"
+                        ]
+                    },
+                    {
+                        "name": "Tools",
+                        "items": [
+                            "PHPUnit, Jira, Confluence, Agile"
+                        ],
+                        "techs": [
+                            "phpunit",
+                            "jira",
+                            "confluence",
+                            "agile"
+                        ]
+                    },
+                    {
+                        "name": "Databases",
+                        "items": [
+                            "MySQL, MSSQL, PostgreSQL, MongoDB"
+                        ],
+                        "techs": [
+                            "mysql",
+                            "mssql",
+                            "postgresql",
+                            "mongodb"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Languages",
+            "content": {
+                "type": "simple_list",
+                "items": [
+                    {
+                        "name": "French",
+                        "complement": "4 out of 5",
+                        "techs": []
+                    },
+                    {
+                        "name": "English",
+                        "complement": "4 out of 5",
+                        "techs": []
+                    },
+                    {
+                        "name": "Spanish",
+                        "complement": "3 out of 5",
+                        "techs": []
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Achievements",
+            "content": {
+                "type": "simple_list",
+                "items": [
+                    {
+                        "name": "Founder of Remota-soccer",
+                        "complement": "2017-2020",
+                        "description": "Remota Soccer was a startup focused on amateur soccer leagues, a rapidly growing market in Brazil in 2017. The software designed, developed, and sold by the company reached 15 leagues and nearly 70,000 registered athletes. The pandemic led clients to bankruptcy, and with them, Remota Soccer.",
+                        "link": "https://ligaprime.com.br",
+                        "link_description": "Liga Prime, an early partner and client, continues to use the system.",
+                        "techs": [
+                            "php",
+                            "javascript",
+                            "startup"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Qualities and Skills",
+            "content": {
+                "type": "simple_list",
+                "items": [
+                    {
+                        "name": "Autonomy",
+                        "techs": []
+                    },
+                    {
+                        "name": "Communication and collaboration skills",
+                        "techs": []
+                    },
+                    {
+                        "name": "Adaptability",
+                        "techs": []
+                    },
+                    {
+                        "name": "Creativity",
+                        "techs": []
+                    }
+                ]
+            }
+        }
+    ]
+}

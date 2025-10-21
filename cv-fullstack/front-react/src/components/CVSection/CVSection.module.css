@@ -1,0 +1,95 @@
+.section {
+    padding: .5rem 0 0 0;
+    background: var(--background-color);
+    position: relative;
+}
+
+.h2 {
+    position: relative;
+    z-index: 1;
+}
+
+.h2::after {
+    content: "▼";
+    position: absolute;
+    right: 0;
+    transform-origin: center;
+    transition: transform 0.5s ease;
+    z-index: -1;
+}
+
+h2.active::after {
+    transform: rotateX(180deg) scaleX(-1);
+}
+
+.accordion_content {
+    max-height: 0;
+    overflow: hidden;
+    background-color: var(--background-color);
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    position: relative;
+}
+
+.open {
+    max-height: 1000px;
+    padding: 1rem 0;
+}
+
+.accordion_content a {
+    font-weight: 600;
+}
+
+.section {
+    padding: .5rem 0 0 0;
+    background: var(--background-color);
+    position: relative;
+}
+
+.text_bloc,
+.simple_list,
+.complex_list,
+.nested_list,
+.experience_list {}
+
+.simple_list li span {}
+
+.section ul {
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
+
+.section ul li a {
+    margin: 0;
+    padding: 0;
+}
+
+.section ul li ul li {
+    margin-left: 1rem;
+}
+
+.section ul li:first-child h3 {
+    margin-top: 0;
+}
+
+h3 span {
+    color: var(--secondary-color);
+    font-size: 1.1rem;
+    font-weight: 200;
+    font-style: italic;
+    text-transform: none;
+}
+
+@media (max-width: 1024px) {
+    h3 span {
+        display: block;
+    }
+
+    .section {
+        padding: 1rem 0 0 0;
+    }
+
+    .section ul li ul li {
+        margin-left: 0;
+    }
+}

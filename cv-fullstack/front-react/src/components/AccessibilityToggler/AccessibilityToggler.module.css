@@ -1,0 +1,71 @@
+:global(html.accessible_size) {
+    font-size: 150%;
+}
+
+:global(html.accessible_darkmode) {
+    --text-color: #ffffff !important;
+    --background-color: #010 !important;
+}
+
+:global(html.accessible_colors) {
+    --primary-color: #333333 !important;
+    --secondary-color: #333333 !important;
+    --text-color: #ffffff;
+    font-weight: 700 !important;
+}
+
+
+
+:global(html.accessible_colors) a {
+    text-decoration: underline;
+}
+
+:global(html.accessible_colors) a:hover,
+:global(html.accessible_colors) a:focus,
+:global(html.accessible_colors) button:hover,
+:global(html.accessible_colors) button:focus {
+    outline: 2px solid var(--secondary-color);
+    color: var(--primary-color) !important;
+}
+
+:global(html.accessible_colors.accessible_darkmode) {
+    --primary-color: #ffffff !important;
+    --secondary-color: #ffffff !important;
+    --text-color: #ffffff !important;
+}
+
+.accessibility_toggler {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.accessibility_toggler button {
+    margin: 0 .1rem;
+    padding: .1rem .4rem;
+    color: var(--primary-color);
+    background-color: var(--background-color);
+    font-weight: 200;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+}
+
+.accessibility_toggler button[aria-pressed="true"] {
+    color: var(--secondary-color);
+    font-weight: 700;
+}
+
+.accessibility_toggler .toggle_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 8px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    width: 2.5rem;
+}
+
+.accessibility_toggler .toggle_button:focus {
+    outline: 2px solid var(--secondary-color);
+}

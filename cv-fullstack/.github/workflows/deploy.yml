@@ -1,0 +1,29 @@
+name: Deploy to DigitalOcean
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: SSH setup
+        uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Deploy SSH
+        run: |
+          ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }} << 'EOF'
+            cd ${{ secrets.PROJECT_PATH }}
+            git pull origin master
+            docker-compose down
+            docker-compose up --build -d
+            docker system prune -f
+          EOF

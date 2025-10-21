@@ -1,0 +1,70 @@
+.li_contact {
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    padding: 0 1rem;
+}
+
+.li_contact:first-child {
+    padding-left: 0;
+}
+
+
+ul .li_contact a {
+    font-weight: 200;
+    margin: 0;
+    display: inline-block;
+}
+
+@media (max-width: 800px) {
+    body {
+        padding: 0 5% 50px;
+    }
+
+    ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .li_contact {
+        padding: 0.1rem 0;
+        display: block;
+    }
+
+    ul .li_contact::before {
+        display: none;
+    }
+
+    .mb-2:first-of-type {
+        padding-top: 0.5rem;
+    }
+
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin: 0 0.5rem;
+    font-weight: 600;
+}
+
+a:hover {
+    color: #555;
+    text-decoration: underline;
+}
+
+a svg {
+    margin-right: .3rem;
+    color: var(--primary-color);
+}
+
+ul {
+    padding-left: 1.5rem;
+    margin: 0.8rem 0;
+}
+
+ul .li_contact {
+    margin: 0.4rem 0;
+    list-style: none;
+    position: relative;
+}

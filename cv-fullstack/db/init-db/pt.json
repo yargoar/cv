@@ -1,0 +1,455 @@
+{
+    "lang": "pt",
+    "name": "Iargo Anjos Rocha",
+    "profession": "Analista / Desenvolvedor FullStack",
+    "contact": [
+        {
+            "label": "E-mail",
+            "content": "yargo.ar@gmail.com",
+            "type": "email"
+        },
+        {
+            "label": "Telefone",
+            "content": "(819) 212-5666",
+            "type": "phone"
+        },
+        {
+            "label": "LinkedIn",
+            "content": "https://linkedin.com/in/iargo-anjos-rocha",
+            "type": "linkedin"
+        }
+    ],
+    "sections": [
+        {
+            "name": "Perfil Profissional",
+            "content": {
+                "type": "text_block",
+                "text": "Desenvolvedor full-stack com mais de 10 anos de experiência em PHP, JavaScript (Vue.js/React) e gerenciamento de infraestrutura em nuvem. Especialista em automação de sistemas e soluções seguras. Forte capacidade analítica e de resolução de problemas."
+            }
+        },
+        {
+            "name": "Projetos",
+            "content": {
+                "type": "complex_list",
+                "items": [
+                    {
+                        "name": "Portal de jogos multiplayer multiplataforma",
+                        "link": "https://tictactoe.vue.yargo.ar",
+                        "description": "Em construção para demonstrar capacidades técnicas - Vue.js, PHP/Laravel, Redis, Reverb, Docker",
+                        "techs": [
+                            "vue.js",
+                            "php",
+                            "laravel",
+                            "redis",
+                            "docker"
+                        ]
+                    },
+                    {
+                        "name": "USherbrooke.ca",
+                        "link": "https://usherbrooke.ca",
+                        "description": "Reestruturação do site e seus temas de acordo com as normas WCAG e W3C",
+                        "techs": [
+                            "html",
+                            "css",
+                            "javascript",
+                            "wcag",
+                            "w3c"
+                        ]
+                    },
+                    {
+                        "name": "Sistema de compra de ingressos na xPayrience",
+                        "link": "https://secure3.xpayrience.com/camping_pourki",
+                        "description": "Redução do tempo de implementação de 35 horas para 30 minutos",
+                        "techs": [
+                            "php",
+                            "laravel",
+                            "javascript"
+                        ]
+                    },
+                    {
+                        "name": "Sistema de reserva de campings na xPayrience",
+                        "link": "https://secure3.xpayrience.com/camping_pourki",
+                        "description": "Concepção e implementação",
+                        "techs": [
+                            "php",
+                            "laravel",
+                            "javascript"
+                        ]
+                    },
+                    {
+                        "name": "Sistema de reserva de quartos de hotel na xPayrience",
+                        "link": "https://secure3.xpayrience.com/motel_laplace",
+                        "description": "Concepção e implementação",
+                        "techs": [
+                            "php",
+                            "laravel",
+                            "javascript"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Experiência Profissional",
+            "content": {
+                "type": "experience_list",
+                "items": [
+                    {
+                        "name": "Desenvolvedor Full Stack",
+                        "company": "COFOMO (Universidade de Montreal)",
+                        "period": "2023-2024",
+                        "tasks": [
+                            "Desenvolvimento de plugins para Moodle em PHP, MySQL, JavaScript e React.",
+                            "Gerenciamento de infraestrutura no Google Cloud (GCP).",
+                            "Revisão de código e criação de testes com PHPUnit.",
+                            "Participação em testes de carga e otimização de plugins."
+                        ],
+                        "techs": [
+                            "php",
+                            "mysql",
+                            "javascript",
+                            "react",
+                            "gcp",
+                            "phpunit"
+                        ]
+                    },
+                    {
+                        "name": "Desenvolvedor Full Stack",
+                        "company": "Universidade de Sherbrooke",
+                        "period": "2019-2023",
+                        "tasks": [
+                            "Reestruturação do site principal de acordo com as normas WCAG e W3C.",
+                            "Integração de componentes Vue.js com Node.js, Yii e Laravel.",
+                            "Desenvolvimento de temas TYPO3/PHP e otimização de UX.",
+                            "Criação de pipelines CI/CD no GitLab."
+                        ],
+                        "techs": [
+                            "vue.js",
+                            "node.js",
+                            "yii",
+                            "laravel",
+                            "typo3",
+                            "gitlab"
+                        ]
+                    },
+                    {
+                        "name": "Desenvolvedor Full Stack",
+                        "company": "xPayrience, Magog",
+                        "period": "2017-2019",
+                        "tasks": [
+                            "Concepção de novas funcionalidades e protótipos.",
+                            "Automatização de processos de produção em Node.js, Laravel e jQuery.",
+                            "Criação de ferramentas administrativas."
+                        ],
+                        "techs": [
+                            "node.js",
+                            "laravel",
+                            "jquery"
+                        ]
+                    },
+                    {
+                        "name": "Desenvolvedor Web",
+                        "company": "Groupe IXTROM. INC., Magog | 2015 & Plogg, Sherbrooke",
+                        "period": "2014-2015",
+                        "tasks": [
+                            "Desenvolvimento de relatórios impressos e online com HTML/CSS, JavaScript e Bootstrap.",
+                            "Integração de mapas interativos com Leaflet e OpenLayers.",
+                            "Criação e personalização de temas WordPress."
+                        ],
+                        "techs": [
+                            "html",
+                            "css",
+                            "javascript",
+                            "bootstrap",
+                            "leaflet",
+                            "wordpress"
+                        ]
+                    },
+                    {
+                        "name": "Desenvolvedor Sênior",
+                        "company": "FGV, Rio de Janeiro, Brasil",
+                        "period": "2012-2013",
+                        "tasks": [
+                            "Liderança de uma equipe de desenvolvimento e coordenação de projetos.",
+                            "Criação de um framework JavaScript para jogos educativos.",
+                            "Integração de soluções educacionais com Moodle e SCORM."
+                        ],
+                        "techs": [
+                            "javascript",
+                            "moodle",
+                            "scorm"
+                        ]
+                    },
+                    {
+                        "name": "Estagiário a Desenvolvedor Sênior",
+                        "company": "UNISUAM, Rio de Janeiro, Brasil",
+                        "period": "2007-2012",
+                        "tasks": [
+                            "Manutenção de sistemas legados em COBOL.",
+                            "Desenvolvimento de SaaS modernos em PHP, JavaScript e CSS.",
+                            "Concepção de jogos educativos para ensino a distância."
+                        ],
+                        "techs": [
+                            "cobol",
+                            "php",
+                            "javascript",
+                            "css"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Habilidades Técnicas",
+            "content": {
+                "type": "simple_list",
+                "items": [
+                    {
+                        "name": "PHP, Laravel, .NET, JavaScript, Vue.js, React",
+                        "techs": [
+                            "php",
+                            "laravel",
+                            ".net",
+                            "javascript",
+                            "vue.js",
+                            "react"
+                        ]
+                    },
+                    {
+                        "name": "MySQL, PostgreSQL, MongoDB",
+                        "techs": [
+                            "mysql",
+                            "postgresql",
+                            "mongodb"
+                        ]
+                    },
+                    {
+                        "name": "GitLab CI/CD, Jenkins, Docker",
+                        "techs": [
+                            "gitlab",
+                            "jenkins",
+                            "docker"
+                        ]
+                    },
+                    {
+                        "name": "Integração UX e conformidade com normas WCAG",
+                        "techs": [
+                            "ux",
+                            "wcag"
+                        ]
+                    },
+                    {
+                        "name": "Gestão de projetos e resolução de problemas",
+                        "techs": [
+                            "gestão de projetos",
+                            "resolução de problemas"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Formação",
+            "content": {
+                "type": "simple_list",
+                "items": [
+                    {
+                        "name": "Bacharelado em Tecnologia da Informação",
+                        "complement": "UNISUAM, Rio de Janeiro, Brasil | 2005-2007",
+                        "techs": []
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Aperfeiçoamento",
+            "content": {
+                "type": "simple_list",
+                "items": [
+                    {
+                        "name": "Desenvolvimento em React.js",
+                        "complement": "2024",
+                        "techs": [
+                            "javascript",
+                            "react"
+                        ]
+                    },
+                    {
+                        "name": "Criação de plugins para Moodle em PHP",
+                        "complement": "2023",
+                        "techs": [
+                            "php",
+                            "moodle"
+                        ]
+                    },
+                    {
+                        "name": "Desenvolvimento em Vue.js",
+                        "complement": "2019",
+                        "techs": [
+                            "javascript",
+                            "vue.js"
+                        ]
+                    },
+                    {
+                        "name": "Google Cloud Platform (GCP)",
+                        "complement": "2022",
+                        "techs": [
+                            "gcp",
+                            "cloud"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Ambiente Técnico",
+            "content": {
+                "type": "nested_list",
+                "items": [
+                    {
+                        "name": "Linguagens",
+                        "items": [
+                            "PHP, JavaScript (Vanilla, Vue.js, React), SQL (MySQL, PostgreSQL, MSSQL), .NET, HTML/CSS, Node.js"
+                        ],
+                        "techs": [
+                            "php",
+                            "javascript",
+                            "sql",
+                            ".net",
+                            "html",
+                            "css",
+                            "node.js"
+                        ]
+                    },
+                    {
+                        "name": "Frameworks / CMS",
+                        "items": [
+                            "Laravel, Yii, TYPO3, Bootstrap, Moodle, WordPress, Drupal"
+                        ],
+                        "techs": [
+                            "laravel",
+                            "yii",
+                            "typo3",
+                            "bootstrap",
+                            "moodle",
+                            "wordpress",
+                            "drupal"
+                        ]
+                    },
+                    {
+                        "name": "CI/CD",
+                        "items": [
+                            "GitLab, Jenkins"
+                        ],
+                        "techs": [
+                            "gitlab",
+                            "jenkins"
+                        ]
+                    },
+                    {
+                        "name": "Cloud",
+                        "items": [
+                            "AWS, Firebase, Google Cloud Platform (GCP)"
+                        ],
+                        "techs": [
+                            "aws",
+                            "firebase",
+                            "gcp"
+                        ]
+                    },
+                    {
+                        "name": "Ferramentas",
+                        "items": [
+                            "PHPUnit, Jira, Confluence, Agile"
+                        ],
+                        "techs": [
+                            "phpunit",
+                            "jira",
+                            "confluence",
+                            "agile"
+                        ]
+                    },
+                    {
+                        "name": "Bancos de Dados",
+                        "items": [
+                            "MySQL, MSSQL, PostgreSQL, MongoDB"
+                        ],
+                        "techs": [
+                            "mysql",
+                            "mssql",
+                            "postgresql",
+                            "mongodb"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Idiomas",
+            "content": {
+                "type": "simple_list",
+                "items": [
+                    {
+                        "name": "Francês",
+                        "complement": "4 de 5",
+                        "techs": []
+                    },
+                    {
+                        "name": "Inglês",
+                        "complement": "4 de 5",
+                        "techs": []
+                    },
+                    {
+                        "name": "Espanhol",
+                        "complement": "3 de 5",
+                        "techs": []
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Realizações",
+            "content": {
+                "type": "simple_list",
+                "items": [
+                    {
+                        "name": "Fundador da Remota-soccer",
+                        "complement": "2017-2020",
+                        "description": "A Remota Soccer era uma startup focada em ligas amadoras de futebol, um mercado em expansão no Brasil em 2017. O software projetado, desenvolvido e vendido pela empresa atingiu 15 ligas e quase 70.000 atletas inscritos. A pandemia levou os clientes à falência, e com eles, a Remota Soccer.",
+                        "link": "https://ligaprime.com.br",
+                        "link_description": "A Liga Prime, uma parceira e cliente desde o início, continua a usar o sistema.",
+                        "techs": [
+                            "php",
+                            "javascript",
+                            "startup"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Qualidades e Habilidades",
+            "content": {
+                "type": "simple_list",
+                "items": [
+                    {
+                        "name": "Autonomia",
+                        "techs": []
+                    },
+                    {
+                        "name": "Senso de comunicação e colaboração",
+                        "techs": []
+                    },
+                    {
+                        "name": "Facilidade de adaptação",
+                        "techs": []
+                    },
+                    {
+                        "name": "Criatividade",
+                        "techs": []
+                    }
+                ]
+            }
+        }
+    ]
+}
