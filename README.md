@@ -18,12 +18,23 @@ Frontend React (Nginx:3000) → Backend API (Node.js:3001) → MongoDB (27017)
 
 ## Quick Start
 
+### Prerequisites Setup
+
+```bash
+# Clone or download the project
+git clone <repository-url>
+cd yargoar
+
+# Copy environment configuration
+cp .env.example .env
+
+# Edit environment variables if needed
+nano .env
+```
+
 ### Method 1: Automated Script (Recommended)
 
 ```bash
-# Navigate to project directory
-cd /root/projects/yargoar
-
 # Start system using automated script
 ./start-cv-fullstack.sh
 ```
@@ -349,10 +360,45 @@ docker cp file.txt yargoar_node_api:/app/
 docker cp yargoar_node_api:/app/file.txt ./
 ```
 
+## Git Repository
+
+This project is managed with Git. The repository includes:
+
+- Complete Docker setup
+- Environment configuration templates
+- Automated management scripts
+- Comprehensive documentation
+
+### Git Commands
+
+```bash
+# Clone repository
+git clone <repository-url>
+cd yargoar
+
+# Check status
+git status
+
+# View history
+git log --oneline
+
+# Create new branch
+git checkout -b feature/new-feature
+
+# Commit changes
+git add .
+git commit -m "Description of changes"
+
+# Push changes
+git push origin main
+```
+
 ## File Structure
 ```
 yargoar/
-├── .env                      # Environment variables
+├── .env                      # Environment variables (not in git)
+├── .env.example              # Environment template
+├── .gitignore                # Git ignore rules
 ├── docker-compose.yml        # Docker orchestration
 ├── start-cv-fullstack.sh     # Startup script
 ├── docker-manager.sh         # Docker manager
