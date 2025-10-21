@@ -59,6 +59,7 @@ services:
         - VITE_APP_FONT_BODY_URL=${VITE_APP_FONT_BODY_URL:-}
         - VITE_APP_FONT_TITLE=${VITE_APP_FONT_TITLE:-Inter}
         - VITE_APP_FONT_BODY=${VITE_APP_FONT_BODY:-Inter}
+        - VITE_APP_LANGUAGES=${VITE_APP_LANGUAGES:-pt,en,fr}
     container_name: yargoar_frontend_react
     restart: unless-stopped
     ports:
