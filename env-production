@@ -17,7 +17,7 @@ LANGUAGES=pt,en,fr
 # =============================================================================
 # FRONTEND
 # =============================================================================
-VITE_API_URL=https://yourdomain.com/api/
+VITE_API_URL=http://localhost:3002/api/
 VITE_APP_TITLE=CV Fullstack
 VITE_APP_PRIMARY_COLOR=#007bff
 VITE_APP_SECONDARY_COLOR=#6c757d

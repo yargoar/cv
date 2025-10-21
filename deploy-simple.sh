@@ -137,7 +137,7 @@ test_deployment() {
     fi
     
     # Testar Frontend
-    if curl -f -s http://localhost/ > /dev/null; then
+    if curl -f -s http://localhost:3002/ > /dev/null; then
         success "Frontend respondendo"
     else
         error "Frontend não está respondendo"
@@ -183,8 +183,9 @@ main() {
             success "Deploy concluído!"
             echo ""
             echo -e "${GREEN}Acessos:${NC}"
-            echo "  Frontend: http://localhost/"
+            echo "  Frontend: http://localhost:3002/"
             echo "  API: http://localhost:3001/api/pt"
+            echo "  HTTPS: http://localhost:3443/ (se configurado)"
             echo ""
             ;;
         status)
