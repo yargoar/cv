@@ -1,0 +1,94 @@
+version: '3.8'
+
+services:
+  # Banco de dados MongoDB - Produção Simples
+  mongo_db:
+    image: mongo:6
+    container_name: yargoar_mongodb_prod
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGODB_ROOT_USERNAME:-admin}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGODB_ROOT_PASSWORD}
+      MONGO_INITDB_DATABASE: ${MONGODB_DB_NAME:-cv_db_prod}
+      LANGUAGES: ${LANGUAGES:-pt,en,fr}
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_prod_data:/data/db
+      - ./cv-fullstack/db/init-db:/docker-entrypoint-initdb.d:ro
+    networks:
+      - yargoar-prod-network
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # Backend Node.js API - Produção Simples
+  node_api:
+    build:
+      context: ./cv-fullstack/api
+      dockerfile: Dockerfile
+    container_name: yargoar_node_api_prod
+    restart: unless-stopped
+    environment:
+      MONGO_URI: mongodb://${MONGODB_ROOT_USERNAME:-admin}:${MONGODB_ROOT_PASSWORD}@mongo_db:27017/${MONGODB_DB_NAME:-cv_db_prod}?authSource=admin
+      NODE_ENV: production
+      PORT: 3001
+    ports:
+      - "3001:3001"
+    depends_on:
+      mongo_db:
+        condition: service_healthy
+    networks:
+      - yargoar-prod-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3001/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # Frontend React - Produção Simples
+  frontend_react:
+    build:
+      context: ./cv-fullstack/front-react
+      dockerfile: Dockerfile
+      args:
+        - VITE_ENV=production
+        - VITE_API_URL=${VITE_API_URL:-https://yourdomain.com/api/}
+        - VITE_APP_TITLE=${VITE_APP_TITLE:-CV Fullstack}
+        - VITE_APP_PRIMARY_COLOR=${VITE_APP_PRIMARY_COLOR:-#007bff}
+        - VITE_APP_SECONDARY_COLOR=${VITE_APP_SECONDARY_COLOR:-#6c757d}
+        - VITE_APP_TEXT_COLOR=${VITE_APP_TEXT_COLOR:-#212529}
+        - VITE_APP_BACKGROUND_COLOR=${VITE_APP_BACKGROUND_COLOR:-#ffffff}
+        - VITE_APP_FONT_TITLE_URL=${VITE_APP_FONT_TITLE_URL:-}
+        - VITE_APP_FONT_BODY_URL=${VITE_APP_FONT_BODY_URL:-}
+        - VITE_APP_FONT_TITLE=${VITE_APP_FONT_TITLE:-Inter}
+        - VITE_APP_FONT_BODY=${VITE_APP_FONT_BODY:-Inter}
+    container_name: yargoar_frontend_react_prod
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on:
+      - node_api
+    networks:
+      - yargoar-prod-network
+    volumes:
+      - ./ssl:/etc/nginx/ssl:ro
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+
+volumes:
+  mongodb_prod_data:
+    driver: local
+
+networks:
+  yargoar-prod-network:
+    driver: bridge

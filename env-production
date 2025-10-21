@@ -1,0 +1,35 @@
+# CV Fullstack Production Environment - Configuração Simples e Segura
+# Copie este arquivo para .env e configure com seus valores de produção
+
+# =============================================================================
+# CONFIGURAÇÃO BÁSICA DE SEGURANÇA
+# =============================================================================
+NODE_ENV=production
+
+# =============================================================================
+# BANCO DE DADOS
+# =============================================================================
+MONGODB_ROOT_USERNAME=admin
+MONGODB_ROOT_PASSWORD=ALTERE_ESTA_SENHA_FORTE
+MONGODB_DB_NAME=cv_db_prod
+LANGUAGES=pt,en,fr
+
+# =============================================================================
+# FRONTEND
+# =============================================================================
+VITE_API_URL=https://yourdomain.com/api/
+VITE_APP_TITLE=CV Fullstack
+VITE_APP_PRIMARY_COLOR=#007bff
+VITE_APP_SECONDARY_COLOR=#6c757d
+VITE_APP_TEXT_COLOR=#212529
+VITE_APP_BACKGROUND_COLOR=#ffffff
+VITE_APP_FONT_TITLE_URL=https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap
+VITE_APP_FONT_BODY_URL=https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap
+VITE_APP_FONT_TITLE=Inter
+VITE_APP_FONT_BODY=Inter
+
+# =============================================================================
+# DOMÍNIO (ALTERE PARA SEU DOMÍNIO)
+# =============================================================================
+DOMAIN_NAME=yourdomain.com
+SSL_EMAIL=your-email@domain.com
