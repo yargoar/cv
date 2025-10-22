@@ -95,6 +95,23 @@
                 "type": "experience_list",
                 "items": [
                     {
+                        "name": "Consultant Developer",
+                        "company": "Concordia University",
+                        "period": "2025",
+                        "tasks": [
+                            "Refactoring of legacy PHP code to improve maintainability and compliance with Moodle coding standards.",
+                            "Implementation of accessibility and multilingual support following WCAG and Quebec language compliance guidelines.",
+                            "Documentation of architecture, data models, and plugin interfaces for internal development teams.",
+                            "Integration of Moodle with internal university systems."
+                        ],
+                        "techs": [
+                            "php",
+                            "mysql",
+                            "javascript",
+                            "phpunit"
+                        ]
+                    },
+                    {
                         "name": "Full Stack Developer",
                         "company": "COFOMO (University of Montreal)",
                         "period": "2023-2024",
@@ -205,11 +222,11 @@
                 "type": "simple_list",
                 "items": [
                     {
-                        "name": "PHP, Laravel, .NET, JavaScript, Vue.js, React",
+                        "name": "PHP, Laravel, Node, JavaScript, Vue.js, React",
                         "techs": [
                             "php",
                             "laravel",
-                            ".net",
+                            "Node",
                             "javascript",
                             "vue.js",
                             "react"
@@ -224,10 +241,10 @@
                         ]
                     },
                     {
-                        "name": "GitLab CI/CD, Jenkins, Docker",
+                        "name": "GitLab CI/CD, Github Actions, Docker",
                         "techs": [
                             "gitlab",
-                            "jenkins",
+                            "githubactions",
                             "docker"
                         ]
                     },
