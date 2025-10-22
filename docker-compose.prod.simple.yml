@@ -8,7 +8,7 @@ services:
     restart: unless-stopped
     environment:
       MONGO_INITDB_ROOT_USERNAME: ${MONGODB_ROOT_USERNAME:-admin}
-      MONGO_INITDB_ROOT_PASSWORD: ${MONGODB_ROOT_PASSWORD}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGODB_DB_ROOT_PASSWORD}
       MONGO_INITDB_DATABASE: ${MONGODB_DB_NAME:-cv_db_prod}
       LANGUAGES: ${LANGUAGES:-pt,en,fr}
     ports:
@@ -33,7 +33,7 @@ services:
     container_name: yargoar_node_api_prod
     restart: unless-stopped
     environment:
-      MONGO_URI: mongodb://${MONGODB_ROOT_USERNAME:-admin}:${MONGODB_ROOT_PASSWORD}@mongo_db:27017/${MONGODB_DB_NAME:-cv_db_prod}?authSource=admin
+      MONGO_URI: mongodb://${MONGODB_ROOT_USERNAME:-admin}:${MONGODB_DB_ROOT_PASSWORD}@mongo_db:27017/${MONGODB_DB_NAME:-cv_db_prod}?authSource=admin
       NODE_ENV: production
       PORT: 3001
     ports:
